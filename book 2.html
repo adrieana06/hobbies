@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Seven Husbands of Evelyn Hugo</title>
+  <link rel="stylesheet" href="book 2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="IMG/logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+  <li><a href="home.html#home" class="nav-link">HOME</a></li>
+  <li><a href="home.html#about" class="nav-link">ABOUT</a></li>
+  <li><a href="home.html#books" class="nav-link">BOOKS</a></li>
+  <li><a href="home.html#contact" class="nav-link">CONTACT</a></li>
+</ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <section class="book-section">
+    <div class="book-container">
+      <div class="book-title">
+        <h1>THE SEVEN HUSBANDS OF EVELYN HUGO</h1>
+        <h3>BY: TAYLOR JENKINS REID</h3>
+      </div>
+
+      <div class="book-content">
+        <div class="book-left">
+          <img src="IMG/IMG-20250622-WA0159.jpg" alt="Book Cover" />
+        </div>
+
+        <div class="book-right">
+          <p>
+            Throughout The Seven Husbands of Evelyn Hugo, Evelyn struggles to become a star and create and control the public's perception of her while suppressing her true self. From the first moment she sets her sights on Hollywood, Evelyn begins to lie about who she is in order to pursue her dream of being a star.Hugo comes from a poor background, but marries the first of her many husbands in order to move to Hollywood and pursue her career. The novel spans over the entirety of Hugo's life, and revolves around the circumstances surrounding each of her marriages.
+          </p>
+        </div>
+      </div>
+
+      <!-- REVIEW SECTION -->
+      <div class="review-section fade-in">
+        <div class="review-text">
+          <h2>MY REVIEW</h2>
+          <p>
+           “The Seven Husbands of Evelyn Hugo” is one of the most interesting books I’ve ever read. Each chapter was clearly written with a lot of thought, and the story was put together really well. The author did a great job showing all sides of Evelyn Hugo and took us through each part of her life in a way that made everything fit together perfectly. I’ve never read a historical fiction book that felt so honest and exciting. Evelyn is such a mysterious character, and even after 400 pages about her, you’re still left with many questions.
+          </p>
+        </div>
+        <img src= "IMG/WhatsApp Image 2025-07-08 at 18.27.43_e97793ce.jpg" alt="Reader" />
+      </div>
+
+      <!-- BACK BUTTON -->
+      <div class="back-btn-container">
+        <a href="Home.html#books" class="back-btn">← Back</a>
+      </div>
+    </div>
+  </section>
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>

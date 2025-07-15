@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BEFORE THE COFFEE GETS COLDo</title>
+  <link rel="stylesheet" href="book 4.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="IMG/logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+  <li><a href="home.html#home" class="nav-link">HOME</a></li>
+  <li><a href="home.html#about" class="nav-link">ABOUT</a></li>
+  <li><a href="home.html#books" class="nav-link">BOOKS</a></li>
+  <li><a href="home.html#contact" class="nav-link">CONTACT</a></li>
+ </ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <section class="book-section">
+    <div class="book-container">
+      <div class="book-title">
+        <h1>BEFORE THE COFFEE GETS COLD</h1>
+        <h3>BY: TOSHIKAZU KAWAGUCHI</h3>
+      </div>
+
+      <div class="book-content">
+        <div class="book-left">
+          <img src= "IMG/coffe.jpg" alt="Book Cover" />
+        </div>
+
+        <div class="book-right">
+          <p>
+            Down a quaint alley in Tokyo lies a hidden café called Funiculi Funicula. It has successfully served coffee for more than a century. However, this café has a unique twist; it offers patrons the unexpected opportunity to travel back in time. The legend surrounding the café attracts various customers chasing lost connections and closure. They must follow strict rules to time travel, making the experience both thrilling and perplexing. The primary rule mandates that travelers must sit in a particular seat designated for time travel. This unique seat is occupied by a ghost who watches over the café. Additionally, customers cannot leave the café while they journey to their pasts. Most crucially, they have a limited time; they must return before their coffee cools down. Breaking any of these rules could lead to frightening consequences, such as being stuck in time forever.
+          </p>
+        </div>
+      </div>
+
+      <!-- REVIEW SECTION -->
+      <div class="review-section fade-in">
+        <div class="review-text">
+          <h2>MY REVIEW</h2>
+          <p>
+           For me, Before the Coffee Gets Cold truly lived up to the hype. The writing was so simple yet beautiful, and I was amazed by how the author turned something as overused as time travel into something so unique and emotional. It broke my heart at times but also left me smiling, and the way it touched on themes like regret, love, and letting go really hit home. It’s one of the few books that genuinely inspired me and made me reflect on my own life.
+          </p>
+        </div>
+        <img src= "IMG/WhatsApp Image 2025-06-30 at 14.03.16_54a0db07.jpg" alt="Reader" />
+      </div>
+
+      <!-- BACK BUTTON -->
+      <div class="back-btn-container">
+        <a href="Home.html#books" class="back-btn">← Back</a>
+      </div>
+    </div>
+  </section>
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>

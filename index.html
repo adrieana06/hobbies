@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVEL REVIEW</title>
+  <link rel="stylesheet" href="index.css" />
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+	  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="IMG/logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">HOME</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#books" class="nav-link">BOOKS</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero-section">
+    <div class="text-content">
+      <h1>
+        CURATED READS,<br />
+        HONEST THOUGHTS.
+      </h1>
+      <p>
+        A personal collection of the books that stuck with me,<br />
+        from powerful to unforgettable stories
+      </p>
+    </div>
+    <div class="book-stack">
+  <img src="IMG/girls.jpg" class="book-cover active" />
+  <img src="IMG/IMG-20250622-WA0159.jpg" class="book-cover" />
+  <img src="IMG/IMG-20250622-WA0162.jpg" class="book-cover" />
+  <img src="IMG/obsesed.jpg" class="book-cover" />
+  <img src="IMG/coffe.jpg" class="book-cover" />
+</div>
+  </section>
+	<!-- About Section -->
+  <section id="about" class="about-section">
+    <h1>ABOUT ME</h1>
+    <div class="about-content">
+      <img src= "IMG/me.jpg" alt="Beach" class="about-image"/>
+      <p>
+        My name is Adrieana Zaireen. I was born on June 1, 2006, and I’m originally from Cheras, Kuala Lumpur. One of the biggest parts of who I am is my love for reading, no surprise there! It has been my favorite hobby since middle school, and over the years, it has become much more than just a pastime.<br> Reading allows me to escape into different worlds and live through the lives of characters who are sometimes completely different from me yet always relatable in some way. Whether it’s a heartwarming romance, a thrilling mystery, or a rich fantasy adventure, I enjoy every story that takes me on a journey.<br> What I love most about reading is how it opens up my mind to new ideas, cultures, and ways of thinking. It helps me understand people better and gives me a deeper appreciation of the world around me. Every book I read teaches me something new not just about the story, but also about myself.<br>For me, reading isn’t just a hobby. It’s a part of my identity, a way to learn, imagine, and grow. It inspires me to think creatively and to see life from different perspectives. And honestly, I can’t imagine my life without it.
+      </p>
+    </div>
+  </section>
+<section id="books" class="books-section"> 
+	<h1>TOP 5 NOVEL</h1>
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="IMG/girls.jpg" alt="Murder Book" />
+        <p>A Good Girl's Guide to Murder</p>
+        <a href="book 1.html" class="view-btn">View More</a>
+      </div>
+      <div class="book-card">
+        <img src="IMG/IMG-20250622-WA0159.jpg" alt="Evelyn Book" />
+        <p>The Seven Husbands of Evelyn Hugo</p>
+        <a href="book 2.html" class="view-btn">View More</a>
+      </div>
+      <div class="book-card">
+        <img src="IMG/IMG-20250622-WA0162.jpg" alt="It Ends With Us" />
+        <p>It Ends With Us</p>
+        <a href= "book 3.html" class="view-btn">View More</a>
+      </div>
+      <div class="book-card">
+        <img src="IMG/coffe.jpg" alt="Before Coffee Gets Cold" />
+        <p>Before The Coffee Gets Cold</p>
+        <a href= "book 4.html" class="view-btn">View More</a>
+      </div>
+      <div class="book-card">
+        <img src="IMG/obsesed.jpg" alt="Obsession Book" />
+        <p>The Obsession</p>
+        <a href= "book 5.html" class="view-btn">View More</a>
+      </div>
+    </div>
+  </section>
+	
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>📬 Get in Touch</h2>
+    <p>Have questions, recommendations, or just want to talk about books? Send me a message below or reach out via my socials!</p>
+
+    <div class="contact-content">
+      <!-- Left -->
+      <div class="contact-left">
+        <div class="contact-info">
+         <div>
+  <img src="IMG/google-mail-gmail-icon-logo-symbol-free-png.webp" alt="Email Icon" class="contact-icon">
+  <a href="mailto:zadrieana@gmail.com">zadrieana@gmail.com</a>
+</div>
+          <div>
+    <img src= "IMG/gr logo.jpeg" alt="Goodreads Icon" class="contact-icon">
+    <a href= "https://www.goodreads.com/user/show/191692658-adrieana" target="_blank">My Goodreads</a>
+  </div>
+          <div>
+            <img src= "IMG/instagram-logo-instagram-icon-transparent-free-png.png" alt="Instagram Icon" class="contact-icon">
+            <a href="https://instagram.com/adrieana.z" target="_blank">@adrieana.z</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+  const stack = document.querySelector('.book-stack');
+
+  function rotateBooks() {
+    const first = stack.querySelector('.book-cover');
+    stack.appendChild(first); // move first image to the back
+    updateClasses();
+  }
+
+  function updateClasses() {
+    const books = stack.querySelectorAll('.book-cover');
+    books.forEach((book, index) => {
+      book.classList.remove('active');
+      book.style.zIndex = 5 - index; // highest z-index for the front book
+      if (index === 0) {
+        book.classList.add('active');
+      }
+    });
+  }
+
+  // Initial class setup
+  updateClasses();
+
+  // Start looping every 2 seconds
+  setInterval(rotateBooks, 2000);
+</script>
+  <!-- JS to highlight active nav -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+	
+</body>
+</html>
+
