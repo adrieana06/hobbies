@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>THE OBSESSION</title>
+  <link rel="stylesheet" href="book 5.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="IMG/logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+  <li><a href="index.html#home" class="nav-link">HOME</a></li>
+  <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+  <li><a href="index.html#books" class="nav-link">BOOKS</a></li>
+  <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+</ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <section class="book-section">
+    <div class="book-container">
+      <div class="book-title">
+        <h1>THE OBSESSION</h1>
+        <h3>BY: JESSE Q SUTANTO</h3>
+      </div>
+
+      <div class="book-content">
+        <div class="book-left">
+          <img src= "IMG/obsesed.jpg" alt="Book Cover" />
+        </div>
+
+        <div class="book-right">
+          <p>
+            Logan, a student at elite Draycott Academy, is haunted by the death of Sophie, a girl he was obsessed with but never truly dated. His grief is all-consuming, and he struggles to rejoin school life, feeling like a ghost among the living. Meanwhile, Delilah Wong, a new student, arrives at Draycott, carrying her own burdens: her father's death, her mother's abusive boyfriend Brandon, and the weight of being an outsider. Both teens are marked by trauma and loss, setting the stage for their fateful collision.
+          </p>
+        </div>
+      </div>
+
+      <!-- REVIEW SECTION -->
+      <div class="review-section fade-in">
+        <div class="review-text">
+          <h2>MY REVIEW</h2>
+          <p>
+           I absolutely loved The Obsession! From the very first page, I was hooked. The way Jesse Q. Sutanto builds suspense and keeps you on the edge of your seat is incredible. The story is so unpredictable, and every twist left me gasping. The character of Roxanne is fascinating,mysterious, complex, and incredibly captivating. I couldn’t stop reading! The mix of psychological depth, tension, and emotional moments makes this book a complete rollercoaster. It’s the kind of book that pulls you in, making you question everything, and by the end, you’re left in awe of how everything ties together. If you’re looking for a thrilling, page-turning read that’ll stay with you long after finishing, The Obsession is absolutely it! Sutanto’s writing is addictive, and I couldn’t get enough of it.
+          </p>
+        </div>
+        <img src= "IMG/WhatsApp Image 2025-07-08 at 22.35.13_16581e47.jpg" alt="Reader" />
+      </div>
+
+      <!-- BACK BUTTON -->
+      <div class="back-btn-container">
+        <a href="index.html#books" class="back-btn">← Back</a>
+      </div>
+    </div>
+  </section>
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>

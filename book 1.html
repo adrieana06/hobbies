@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A Good Girl’s Guide to Murder</title>
+  <link rel="stylesheet" href="book.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="IMG/logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+  <li><a href="index.html#home" class="nav-link">HOME</a></li>
+  <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+  <li><a href="index.html#books" class="nav-link">BOOKS</a></li>
+  <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+</ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <section class="book-section">
+    <div class="book-container">
+      <div class="book-title">
+        <h1>A GOOD GIRL’S GUIDE TO MURDER</h1>
+        <h3>BY: HOLLY JACKSON</h3>
+      </div>
+
+      <div class="book-content">
+        <div class="book-left">
+          <img src="IMG/girls.jpg" alt="Book Cover" />
+        </div>
+
+        <div class="book-right">
+          <p>
+            A Good Girl’s Guide to Murder by Holly Jackson is a fun, fresh read for someone of any age (above 13) who enjoys crime, murder mystery or thrillers, even if they don’t read them regularly.Good-girl, high school senior Pip is applying to top-tier colleges and hanging out with her close friends and lovely family when she decides that her senior project will be an investigation into the five-year-old murder of the town sweetheart, Andie, by her boyfriend, Sal, who then killed himself. Something about the whole thing didn’t seem right to Pip, and certainly the racism that it engendered about Sal and his still-present family wasn’t right. But as Pip digs deeper and deeper, ignoring the warnings of her teacher and the concerns of her friends and family, Pip discovers that the town secrets merely begin with the murder-suicide.
+          </p>
+        </div>
+      </div>
+
+      <!-- REVIEW SECTION -->
+      <div class="review-section fade-in">
+        <div class="review-text">
+          <h2>MY REVIEW</h2>
+          <p>
+           I absolutely loved A Good Girl's Guide to Murder! From the first page, I was hooked. The mystery surrounding Andie Bell's disappearance kept me on the edge of my seat, and just when I thought I had it all figured out, there was a twist that completely surprised me. Pip, the main character, is amazing,smart, determined, and so relatable in the way she pursues the truth. It wasn't just about solving the case, but also about her personal growth and navigating relationships with those around her. The book had the perfect mix of suspense, emotion, and even humor, making it hard to put down. I can’t recommend it enough it’s thrilling, keeps you guessing, and is the kind of book that stays with you long after you finish it!
+          </p>
+        </div>
+        <img src="IMG/IMG-20250622-WA0101.jpg" alt="Reader" />
+      </div>
+
+      <!-- BACK BUTTON -->
+      <div class="back-btn-container">
+        <a href="index.html#books" class="back-btn">← Back</a>
+      </div>
+    </div>
+  </section>
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>
